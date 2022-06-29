@@ -1,0 +1,9 @@
+.task-text,
+.typing-display {
+  font-family: oxygen;
+  font-weight: bolder;
+}
+
+.typing-area {
+  font-weight: bold;
+}

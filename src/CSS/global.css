@@ -1,0 +1,29 @@
+/* Fonts */
+
+@font-face {
+  font-family: "oxygen";
+  src: local("oxygen"), url("../fonts/Oxygen-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "nova";
+  src: local("nova"), url("../fonts/NovaRound-Regular.ttf") format("truetype");
+}
+
+/* CSS */
+
+body {
+  font-family: "nova";
+}
+
+.container {
+  max-width: 97% !important;
+}
+
+.full-box {
+  height: 97vh;
+}
+
+.timer{
+  font-family: oxygen;
+}
