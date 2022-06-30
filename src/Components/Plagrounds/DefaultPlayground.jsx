@@ -49,6 +49,9 @@ const DefaultPlayground = ({
 
   const handleKeyDown = ({ keyCode }) => {
     if (keyCode === 32) {
+      if (currentWordIndex === words.length - 1) {
+        setStatus("finished");
+      }
       checkMatch();
       setCurrentInput("");
       setCurrentWordIndex(currentWordIndex + 1);
@@ -89,14 +92,14 @@ const DefaultPlayground = ({
 
   const setColor = (indexOfWords) => {
     for (let index = 0; index < trueValue.length; index++) {
-      const element = trueValue[index];
-      if (element === indexOfWords) {
+      const numOfWords = trueValue[index];
+      if (numOfWords === indexOfWords) {
         return "text-success bg-success bg-opacity-25";
       }
     }
     for (let index = 0; index < falseValue.length; index++) {
-      const element = falseValue[index];
-      if (element === indexOfWords) {
+      const numOfWords = falseValue[index];
+      if (numOfWords === indexOfWords) {
         return "text-danger bg-danger bg-opacity-25";
       }
     }
