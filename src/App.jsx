@@ -1,12 +1,16 @@
 import React from "react";
 import RandomPlay from "./pages/RandomPlay";
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Navigation from "./Components/Navigation";
 
 const App = () => {
   return (
     <>
+      <Navigation />
       <Routes>
-        <Route path="/" element={<RandomPlay />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/random" element={<RandomPlay />} />
         {/* <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="teams" element={<Teams />}>
@@ -16,12 +20,6 @@ const App = () => {
           </Route>
         </Route> */}
       </Routes>
-      <div
-        style={{ height: "80vh" }}
-        className="d-flex justify-content-center align-items-center"
-      >
-        <h1>Hello World</h1>
-      </div>
     </>
   );
 };
